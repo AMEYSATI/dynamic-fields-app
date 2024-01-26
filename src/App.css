@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.addfield { color: #252c2e; 
+  padding-left: 35%;
+  font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold; line-height: 32px; margin: 20px 0 24px; text-shadow: 1px 1px 1px #082b34; }
+
+  .display{
+    color: #252c2e; 
+  padding-left: 20%;
+  font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold; line-height: 32px; margin: 20px 0 24px; text-shadow: 1px 1px 1px #082b34;
+  }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  margin-top: 10px;
+  font-weight: bold;
 }
+
+
+input,
+select,
+textarea {
+  margin: 5px 0;
+  padding: 15px; /* Increased padding for a larger input box */
+  border: 2px solid #3498db; /* A nice blue color for the border */
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none; /* Remove default outline */
+  --glow-color: #36cc72; /* Slightly darker green glow color */
+  --glow-spread-color: rgba(54, 204, 114, 0.781); /* Darker green spread color with alpha */
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(255, 255, 255);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+/* Style dropdown arrow */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/118/118738.png');
+  background-size: 12px; /* Adjust the size of the arrow */
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+
+button:hover {
+  background-color: #45a049;
+}
+
+.display-fields {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.field {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.field strong {
+  color: #333;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.select-dropdown {
+  width: 100%;
+}
+
+
+
+/* CSS */
+.button-40 {
+  margin-top: 10px;
+  --glow-color: #36cc72;
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgba(54, 204, 114, 0.781);
+  --btn-color: rgb(255, 255, 255);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  }
+
+.button-40::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.button-40:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+.button-40:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+.clear{
+  margin-left: 100px;
+}
+
+
