@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## How to run project
 
 Clone Repository
-### ``git clone ``
+### ``git clone https://github.com/AMEYSATI/dynamic-fields-app.git``
 
 Install Dependencies
 ### ``npm i``
